@@ -1,0 +1,31 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="RadioMEI" landmarks="sv2#page23 sv2#area6 sv2#area7 sv2#area4 sv2#area9" homePage="sv2#page23">
+  <OperationUnits>
+    <LoginUnit gr:x="350" gr:y="390" id="sv2#lgu1" name="Login1" gr:showAllParts="false">
+      <KOLink id="sv2#lgu1#kln22" name="KOLogin" to="sv2#page5#enu15" automaticCoupling="true" gr:bendpoints="-67,18,58,48"/>
+      <OKLink id="sv2#lgu1#oln1" name="OKFlow44" to="sv2#page23#mssu6">
+        <LinkParameter id="sv2#lgu1#oln1#par75" name="Welcome_Shown Messages" target="sv2#page23#mssu6.shownMessages" sourceValue="Welcome"/>
+      </OKLink>
+    </LoginUnit>
+    <LogoutUnit gr:x="300" gr:y="-280" id="sv2#lou3" name="Logout" siteView="sv2" invalidateSession="true"/>
+    <LoginUnit id="sv2#lgu2" name="Login" gr:x="485" gr:y="705"/>
+    <MathUnit id="sv2#mathu1" name="Math" gr:x="-55" gr:y="1540" resultType="integer" defaultExpression="first+second">
+      <MathVariable id="sv2#mathu1#mathv1" name="first"/>
+      <MathVariable id="sv2#mathu1#mathv2" name="second"/>
+      <KOLink id="sv2#mathu1#kln3" name="KOFlow3" to="sv2#area9#page28#mssu8">
+        <LinkParameter id="sv2#mathu1#kln3#par215" name="Error Calculating_Shown Messages" target="sv2#area9#page28#mssu8.shownMessages" sourceValue="Error Calculating"/>
+      </KOLink>
+      <OKLink id="sv2#mathu1#oln33" name="OKFlow30" to="sv2#area9#page28#enu26" gr:bendpoints="104,-23,-91,47">
+        <LinkParameter id="sv2#mathu1#oln33#par216" name="Result_FieldVotes" source="result" target="sv2#area9#page28#enu26#fld52_slot"/>
+      </OKLink>
+    </MathUnit>
+    <ModifyUnit id="sv2#mfu1" name="UpdatePlaylistVotes" gr:x="570" gr:y="1385" entity="pkg3#ent18">
+      <Selector id="sv2#mfu1#su52" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#mfu1#su52#kcond6" name="KeyCondition18" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv2#mfu1#oln34" name="OKFlow2" to="sv2#area9#page27" automaticCoupling="true"/>
+      <KOLink id="sv2#mfu1#kln4" name="KOFlow4" to="sv2#area9#page28#mssu8">
+        <LinkParameter id="sv2#mfu1#kln4#par217" name="Error Updating_Shown Messages" target="sv2#area9#page28#mssu8.shownMessages" sourceValue="Error Updating"/>
+      </KOLink>
+    </ModifyUnit>
+  </OperationUnits>
+</SiteView>

@@ -1,0 +1,93 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="400" gr:y="290" id="sv2#area7#page29" name="NewSounds">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="65" id="sv2#area7#page29#enu27" name="Choose NewSounds to Submit" entity="pkg4#ent21" linkOrder="sv2#area7#page29#enu27#ln141">
+      <SelectionField id="sv2#area7#page29#enu27#sfld20" name="Year" type="string"/>
+      <SelectionField id="sv2#area7#page29#enu27#sfld22" name="Week" type="string"/>
+      <SelectionField id="sv2#area7#page29#enu27#sfld23" name="Month" type="string"/>
+      <Link id="sv2#area7#page29#enu27#ln141" name="Search" to="sv2#area7#page29#inu2" type="normal" validate="true">
+        <LinkParameter id="sv2#area7#page29#enu27#ln141#par284" name="Month_Month [oid]" source="sv2#area7#page29#enu27#sfld23" target="sv2#area7#page29#inu2#su62#rcond39.pkg4#ent22#att46"/>
+        <LinkParameter id="sv2#area7#page29#enu27#ln141#par285" name="Week_Week [oid]" source="sv2#area7#page29#enu27#sfld22" target="sv2#area7#page29#inu2#su62#rcond40.pkg4#ent20#att42"/>
+        <LinkParameter id="sv2#area7#page29#enu27#ln141#par286" name="Year_Year [oid]" source="sv2#area7#page29#enu27#sfld20" target="sv2#area7#page29#inu2#su62#rcond41.pkg4#ent24#att49"/>
+      </Link>
+      <Field id="sv2#area7#page29#enu27#fld57" name="playlistID" type="string" modifiable="false" preloaded="true" hidden="true"/>
+      <Link id="sv2#area7#page29#enu27#ln147" name="Flow147" to="sv2#area7#cru20" type="transport" validate="true">
+        <LinkParameter id="sv2#area7#page29#enu27#ln147#par279" name="Key [oid]_NewSounds.oid(NewSoundsPlaylistToNewSounds)" source="key.pkg4#ent21#att44" target="sv2#area7#cru20.rel16#role32.pkg4#ent21#att44"/>
+        <LinkParameter id="sv2#area7#page29#enu27#ln147#par280" name="playlistID_PlayList.oid(NewSoundsPlaylistToPlayList)" source="sv2#area7#page29#enu27#fld57" target="sv2#area7#cru20.rel20#role40.pkg3#ent18#att37"/>
+      </Link>
+      <Field id="sv2#area7#page29#enu27#fld58" name="playlistName" type="string" modifiable="false" preloaded="true"/>
+    </EntryUnit>
+    <SelectorUnit gr:x="235" gr:y="0" id="sv2#area7#page29#seu33" name="Selector33" entity="pkg4#ent24">
+      <Link id="sv2#area7#page29#seu33#ln138" name="Flow138" to="sv2#area7#page29#enu27" type="transport" validate="true">
+        <LinkParameter id="sv2#area7#page29#seu33#ln138#par270" name="year_Selection Field20 [label]" source="pkg4#ent24#att50Array" target="sv2#area7#page29#enu27#sfld20_label"/>
+        <LinkParameter id="sv2#area7#page29#seu33#ln138#par271" name="oid_Selection Field20 [output]" source="pkg4#ent24#att49Array" target="sv2#area7#page29#enu27#sfld20_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit gr:x="235" gr:y="85" id="sv2#area7#page29#seu39" name="Selector39" entity="pkg4#ent22">
+      <Link id="sv2#area7#page29#seu39#ln139" name="Flow139" to="sv2#area7#page29#enu27" type="transport" validate="true">
+        <LinkParameter id="sv2#area7#page29#seu39#ln139#par281" name="Month_Month [label]" source="pkg4#ent22#att47Array" target="sv2#area7#page29#enu27#sfld23_label"/>
+        <LinkParameter id="sv2#area7#page29#seu39#ln139#par282" name="oid_Month [output]" source="pkg4#ent22#att46Array" target="sv2#area7#page29#enu27#sfld23_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit gr:x="235" gr:y="170" id="sv2#area7#page29#seu40" name="Selector40" entity="pkg4#ent20">
+      <Link id="sv2#area7#page29#seu40#ln140" name="Flow140" to="sv2#area7#page29#enu27" type="transport" validate="true">
+        <LinkParameter id="sv2#area7#page29#seu40#ln140#par272" name="week_Week [label]" source="pkg4#ent20#att43Array" target="sv2#area7#page29#enu27#sfld22_label"/>
+        <LinkParameter id="sv2#area7#page29#seu40#ln140#par273" name="oid_Week [output]" source="pkg4#ent20#att42Array" target="sv2#area7#page29#enu27#sfld22_output"/>
+      </Link>
+    </SelectorUnit>
+    <IndexUnit id="sv2#area7#page29#inu2" entity="pkg4#ent21" displayAttributes="pkg4#ent21#att53 pkg4#ent21#att51 pkg4#ent21#att52" gr:x="45" gr:y="185" name="NewSounds List" linkOrder="sv2#area7#page29#inu2#ln148">
+      <Selector id="sv2#area7#page29#inu2#su62" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#area7#page29#inu2#su62#rcond39" name="Month" predicate="in" implied="false" role="rel17#role34"/>
+        <RelationshipRoleCondition id="sv2#area7#page29#inu2#su62#rcond40" name="Week" predicate="in" implied="false" role="rel18#role36"/>
+        <RelationshipRoleCondition id="sv2#area7#page29#inu2#su62#rcond41" name="Year" predicate="in" implied="false" role="rel15#role30"/>
+      </Selector>
+      <Link id="sv2#area7#page29#inu2#ln148" name="Flow146" to="sv2#area7#cru20" type="normal" validate="true">
+        <LinkParameter id="sv2#area7#page29#inu2#ln148#par289" name="oid_NewSounds.oid(NewSoundsPlaylistToNewSounds)" source="data[].pkg4#ent21#att44" target="sv2#area7#cru20.rel16#role32.pkg4#ent21#att44"/>
+      </Link>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area7#page29#enu27">
+          <layout:Link link="sv2#area7#page29#enu27#ln141"/>
+          <layout:Field field="sv2#area7#page29#enu27#sfld20"/>
+          <layout:Field field="sv2#area7#page29#enu27#sfld22"/>
+          <layout:Field field="sv2#area7#page29#enu27#sfld23"/>
+          <layout:Field field="sv2#area7#page29#enu27#fld58"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area7#page29#inu2">
+          <layout:Link link="sv2#area7#page29#inu2#ln148"/>
+          <layout:Attribute attribute="pkg4#ent21#att53"/>
+          <layout:Attribute attribute="pkg4#ent21#att51"/>
+          <layout:Attribute attribute="pkg4#ent21#att52"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

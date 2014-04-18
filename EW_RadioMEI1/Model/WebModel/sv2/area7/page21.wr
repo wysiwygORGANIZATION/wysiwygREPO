@@ -1,0 +1,108 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv2#area7#page21" name="MyPlayList" landmark="false">
+  <ContentUnits>
+    <EntryUnit gr:x="160" gr:y="5" id="sv2#area7#page21#enu21" name="Create PlayList" entity="pkg3#ent18" linkOrder="sv2#area7#page21#enu21#ln103">
+      <Field id="sv2#area7#page21#enu21#fld41" name="active" type="integer" modifiable="false" preloaded="true" hidden="true"/>
+      <Field id="sv2#area7#page21#enu21#fld42" name="vote" type="integer" modifiable="false" hidden="true" preloaded="true"/>
+      <Field id="sv2#area7#page21#enu21#fld43" name="name" type="string" modifiable="true"/>
+      <Field id="sv2#area7#page21#enu21#fld44" name="userID" type="integer" modifiable="false" preloaded="true" hidden="true"/>
+      <Link id="sv2#area7#page21#enu21#ln103" name="Create" to="sv2#area7#opg6#cru18" type="normal" validate="true">
+        <LinkParameter id="sv2#area7#page21#enu21#ln103#par185" name="active_active" source="sv2#area7#page21#enu21#fld41" target="sv2#area7#opg6#cru18.pkg3#ent18#att40"/>
+        <LinkParameter id="sv2#area7#page21#enu21#ln103#par186" name="name_name" source="sv2#area7#page21#enu21#fld43" target="sv2#area7#opg6#cru18.pkg3#ent18#att39"/>
+        <LinkParameter id="sv2#area7#page21#enu21#ln103#par187" name="PlayList Object_PlayList Object" source="entityBean" target="sv2#area7#opg6#cru18.entityBeans"/>
+        <LinkParameter id="sv2#area7#page21#enu21#ln103#par188" name="vote_votes" source="sv2#area7#page21#enu21#fld42" target="sv2#area7#opg6#cru18.pkg3#ent18#att38"/>
+        <LinkParameter id="sv2#area7#page21#enu21#ln103#par189" name="userID_User.oid(PlayListToUser)" source="sv2#area7#page21#enu21#fld44" target="sv2#area7#opg6#cru18.rel13#role25.userOID"/>
+      </Link>
+    </EntryUnit>
+    <GetUnit gr:x="5" gr:y="0" id="sv2#area7#page21#gtu8" name="Get5" contextParameters="UserCtxParam">
+      <Link id="sv2#area7#page21#gtu8#ln104" name="Flow45" to="sv2#area7#page21#enu21" type="transport" validate="true">
+        <LinkParameter id="sv2#area7#page21#gtu8#ln104#par190" name="0_active" sourceValue="1" target="sv2#area7#page21#enu21#fld41_slot"/>
+        <LinkParameter id="sv2#area7#page21#gtu8#ln104#par192" name="0_vote" sourceValue="0" target="sv2#area7#page21#enu21#fld42_slot"/>
+        <LinkParameter id="sv2#area7#page21#gtu8#ln104#par193" name="UserCtxParam.oid_userID" source="sv2#area7#page21#gtu8.UserCtxParam" target="sv2#area7#page21#enu21#fld44_slot"/>
+      </Link>
+      <Link id="sv2#area7#page21#gtu8#ln105" name="Flow49" to="sv2#area7#page21#pwu8" automaticCoupling="true" type="transport" validate="true"/>
+    </GetUnit>
+    <PowerIndexUnit gr:x="0" gr:y="120" id="sv2#area7#page21#pwu8" name="My PlayLists" sortable="true" checkable="false" useCountQuery="false" entity="pkg3#ent18" displayAttributes="pkg3#ent18#att37 pkg3#ent18#att38 pkg3#ent18#att39 pkg3#ent18#att40" linkOrder="sv2#area7#page21#pwu8#ln111 sv2#area7#page21#pwu8#ln144">
+      <Selector id="sv2#area7#page21#pwu8#su43" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#area7#page21#pwu8#su43#rcond23" name="RoleCondition9" predicate="in" implied="false" role="rel13#role26"/>
+      </Selector>
+      <Link id="sv2#area7#page21#pwu8#ln111" name="Details" to="sv2#area7#page21#pwu13" type="normal" validate="true">
+        <LinkParameter id="sv2#area7#page21#pwu8#ln111#par253" name="oid_RoleCondition26 [oid]" source="data[].pkg3#ent18#att37" target="sv2#area7#page21#pwu13#su49#rcond26.pkg3#ent19#att41"/>
+      </Link>
+      <Link id="sv2#area7#page21#pwu8#ln144" name="Submit to NewSounds" to="sv2#area7#page29#enu27" type="normal" validate="true">
+        <LinkParameter id="sv2#area7#page21#pwu8#ln144#par276" name="oid_playlistID" source="data[].pkg3#ent18#att37" target="sv2#area7#page29#enu27#fld57_slot"/>
+        <LinkParameter id="sv2#area7#page21#pwu8#ln144#par290" name="name_playlistName" source="data[].pkg3#ent18#att39" target="sv2#area7#page29#enu27#fld58_slot"/>
+      </Link>
+    </PowerIndexUnit>
+    <PowerIndexUnit gr:x="170" gr:y="130" id="sv2#area7#page21#pwu13" name="Selected Playlist" sortable="true" checkable="false" useCountQuery="false" entity="pkg2#ent11" displayAttributes="pkg2#ent11#att29 pkg2#ent11#att30 pkg2#ent11#att22 pkg2#ent11#att26 pkg2#ent11#att31">
+      <Selector id="sv2#area7#page21#pwu13#su49" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#area7#page21#pwu13#su49#rcond26" name="RoleCondition26" predicate="in" implied="false" role="rel12#role23"/>
+      </Selector>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area7#page21#pwu8">
+          <layout:Attribute attribute="pkg3#ent18#att37"/>
+          <layout:Attribute attribute="pkg3#ent18#att38"/>
+          <layout:Attribute attribute="pkg3#ent18#att39"/>
+          <layout:Attribute attribute="pkg3#ent18#att40"/>
+          <layout:Link link="sv2#area7#page21#pwu8#ln111"/>
+          <layout:Link link="sv2#area7#page21#pwu8#ln144"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area7#page21#enu21">
+          <layout:Link link="sv2#area7#page21#enu21#ln103"/>
+          <layout:Field field="sv2#area7#page21#enu21#fld43"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area7#page21#pwu13">
+          <layout:Attribute attribute="pkg2#ent11#att29"/>
+          <layout:Attribute attribute="pkg2#ent11#att30"/>
+          <layout:Attribute attribute="pkg2#ent11#att22"/>
+          <layout:Attribute attribute="pkg2#ent11#att26"/>
+          <layout:Attribute attribute="pkg2#ent11#att31"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

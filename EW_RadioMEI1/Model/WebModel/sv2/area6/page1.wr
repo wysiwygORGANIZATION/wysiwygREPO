@@ -1,0 +1,169 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv2#area6#page1" name="Music" landmark="false" ignoreMasterPage="false">
+  <ContentUnits>
+    <DataUnit gr:x="300" gr:y="60" id="sv2#area6#page1#dau1" name="Music" entity="pkg2#ent11" displayAttributes="pkg2#ent11#att28 pkg2#ent11#att29 pkg2#ent11#att30 pkg2#ent11#att22 pkg2#ent11#att26 pkg2#ent11#att31" linkOrder="sv2#area6#page1#dau1#ln50">
+      <Selector id="sv2#area6#page1#dau1#su2" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area6#page1#dau1#su2#kcond2" name="KeyCondition18" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#area6#page1#dau1#ln50" to="sv2#area6#page13#enu14" type="normal" validate="true" ajaxOpenWindow="true" ajaxWindowWidth="200" ajaxWindowHeight="200" ajaxWindowAutoResizing="true" ajaxWindowClosable="true" ajaxWindowDraggable="true" ajaxWindowModal="true" ajaxEnabled="true" name="Add to Cart">
+        <LinkParameter id="sv2#area6#page1#dau1#ln50#par96" name="oid_musicID" source="data.pkg2#ent11#att28" target="sv2#area6#page13#enu14#fld29_slot"/>
+      </Link>
+    </DataUnit>
+    <PowerIndexUnit id="sv2#area6#page1#pwu1" name="Music List" linkOrder="sv2#area6#page1#pwu1#ln8" gr:x="120" gr:y="65" sortable="true" checkable="false" useCountQuery="false" entity="pkg2#ent11" displayAttributes="pkg2#ent11#att28 pkg2#ent11#att29 pkg2#ent11#att30">
+      <Link id="sv2#area6#page1#pwu1#ln8" name="Details" to="sv2#area6#page1#dau1" type="normal" validate="true">
+        <LinkParameter id="sv2#area6#page1#pwu1#ln8#par70" name="oid_KeyCondition18 [oid]" source="data[].pkg2#ent11#att28" target="sv2#area6#page1#dau1#su2#kcond2.pkg2#ent11#att28"/>
+      </Link>
+    </PowerIndexUnit>
+    <MultiMessageUnit gr:x="300" gr:y="200" id="sv2#area6#page1#mssu5" name="Message Box"/>
+    <SelectorUnit gr:x="55" gr:y="175" id="sv2#area6#page1#seu1" name="Selector1" entity="pkg2#ent15">
+      <Link id="sv2#area6#page1#seu1#ln149" name="Flow149" to="sv2#area6#page1#enu29" type="transport" validate="true">
+        <LinkParameter id="sv2#area6#page1#seu1#ln149#par291" name="name_Selection Field24 [label]" source="pkg2#ent15#att25Array" target="sv2#area6#page1#enu29#sfld24_label"/>
+        <LinkParameter id="sv2#area6#page1#seu1#ln149#par292" name="oid_Selection Field24 [output]" source="pkg2#ent15#att23Array" target="sv2#area6#page1#enu29#sfld24_output"/>
+      </Link>
+    </SelectorUnit>
+    <PowerIndexUnit id="sv2#area6#page1#pwu10" name="Results" gr:x="50" gr:y="290" sortable="false" checkable="false" useCountQuery="false" entity="pkg2#ent11" displayAttributes="pkg2#ent11#att28 pkg2#ent11#att29 pkg2#ent11#att30 pkg2#ent11#att22 pkg2#ent11#att26 pkg2#ent11#att31" linkOrder="sv2#area6#page1#pwu10#ln47">
+      <Selector id="sv2#area6#page1#pwu10#su20" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv2#area6#page1#pwu10#su20#acond7" name="NameRole" predicate="contains" booleanOperator="or" implied="true" attributes="pkg2#ent11#att30" ignoreCase="true"/>
+        <RelationshipRoleCondition id="sv2#area6#page1#pwu10#su20#rcond3" name="GenreRole" predicate="in" implied="true" role="rel19#role38"/>
+      </Selector>
+      <Link id="sv2#area6#page1#pwu10#ln47" name="Details" to="sv2#area6#page1#dau7" type="normal" validate="true">
+        <LinkParameter id="sv2#area6#page1#pwu10#ln47#par86" name="oid_KeyCondition18 [oid]" source="data[].pkg2#ent11#att28" target="sv2#area6#page1#dau7#su24#kcond3.pkg2#ent11#att28"/>
+      </Link>
+    </PowerIndexUnit>
+    <DataUnit id="sv2#area6#page1#dau7" name="Music" gr:x="275" gr:y="295" entity="pkg2#ent11" displayAttributes="pkg2#ent11#att28 pkg2#ent11#att29 pkg2#ent11#att30 pkg2#ent11#att22 pkg2#ent11#att26 pkg2#ent11#att31" linkOrder="sv2#area6#page1#dau7#ln151">
+      <Selector id="sv2#area6#page1#dau7#su24" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area6#page1#dau7#su24#kcond3" name="KeyCondition18" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#area6#page1#dau7#ln151" name="Add to Cart" to="sv2#area6#page13#enu14" type="normal" validate="true" ajaxOpenWindow="true" ajaxEnabled="true" ajaxWindowWidth="200" ajaxWindowHeight="200" ajaxWindowAutoResizing="true" ajaxWindowClosable="true" ajaxWindowDraggable="true" ajaxWindowModal="true">
+        <LinkParameter id="sv2#area6#page1#dau7#ln151#par295" name="oid_musicID" source="data.pkg2#ent11#att28" target="sv2#area6#page13#enu14#fld29_slot"/>
+      </Link>
+    </DataUnit>
+    <EntryUnit gr:x="155" gr:y="170" id="sv2#area6#page1#enu29" name="Search by Name" entity="pkg2#ent11" linkOrder="sv2#area6#page1#enu29#ln150">
+      <SelectionField id="sv2#area6#page1#enu29#sfld24" name="genre" type="string"/>
+      <Field id="sv2#area6#page1#enu29#fld59" name="search" type="string" modifiable="true"/>
+      <Link id="sv2#area6#page1#enu29#ln150" name="Search" to="sv2#area6#page1#pwu10" type="normal" validate="true">
+        <LinkParameter id="sv2#area6#page1#enu29#ln150#par293" name="Selection Field24_GenreRole [oid]" source="sv2#area6#page1#enu29#sfld24" target="sv2#area6#page1#pwu10#su20#rcond3.pkg2#ent15#att23"/>
+        <LinkParameter id="sv2#area6#page1#enu29#ln150#par294" name="search_NameRole" source="sv2#area6#page1#enu29#fld59" target="sv2#area6#page1#pwu10#su20#acond7"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area6#page1#mssu5"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area6#page1#enu29">
+          <layout:Field field="sv2#area6#page1#enu29#sfld24"/>
+          <layout:Field field="sv2#area6#page1#enu29#fld59"/>
+          <layout:Link link="sv2#area6#page1#enu29#ln150"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Grid containerType="grid">
+          <layout:Row>
+            <layout:Cell colspan="6">
+              <layout:Unit unitId="sv2#area6#page1#pwu10">
+                <layout:Attribute attribute="pkg2#ent11#att28"/>
+                <layout:Attribute attribute="pkg2#ent11#att29"/>
+                <layout:Attribute attribute="pkg2#ent11#att30"/>
+                <layout:Attribute attribute="pkg2#ent11#att22"/>
+                <layout:Attribute attribute="pkg2#ent11#att26"/>
+                <layout:Attribute attribute="pkg2#ent11#att31"/>
+                <layout:Link link="sv2#area6#page1#pwu10#ln47"/>
+              </layout:Unit>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell colspan="6">
+              <layout:Unit unitId="sv2#area6#page1#dau7">
+                <layout:Attribute attribute="pkg2#ent11#att28"/>
+                <layout:Attribute attribute="pkg2#ent11#att29"/>
+                <layout:Attribute attribute="pkg2#ent11#att30"/>
+                <layout:Attribute attribute="pkg2#ent11#att22"/>
+                <layout:Attribute attribute="pkg2#ent11#att26"/>
+                <layout:Attribute attribute="pkg2#ent11#att31"/>
+                <layout:Link link="sv2#area6#page1#dau7#ln151"/>
+              </layout:Unit>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+        </layout:Grid>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv2#area6#page1#pwu1">
+          <layout:Attribute attribute="pkg2#ent11#att28"/>
+          <layout:Attribute attribute="pkg2#ent11#att29"/>
+          <layout:Attribute attribute="pkg2#ent11#att30"/>
+          <layout:Link link="sv2#area6#page1#pwu1#ln8"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv2#area6#page1#dau1">
+          <layout:Attribute attribute="pkg2#ent11#att28"/>
+          <layout:Attribute attribute="pkg2#ent11#att29"/>
+          <layout:Attribute attribute="pkg2#ent11#att30"/>
+          <layout:Attribute attribute="pkg2#ent11#att22"/>
+          <layout:Attribute attribute="pkg2#ent11#att26"/>
+          <layout:Attribute attribute="pkg2#ent11#att31"/>
+          <layout:Link link="sv2#area6#page1#dau1#ln50"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

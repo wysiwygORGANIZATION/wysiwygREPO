@@ -1,0 +1,140 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area2#page6" name="Music" landmark="false" ignoreMasterPage="true" gr:x="255" gr:y="5">
+  <ContentUnits>
+    <PowerIndexUnit id="sv1#area2#page6#pwu2" name="Music List" linkOrder="sv1#area2#page6#pwu2#ln4 sv1#area2#page6#pwu2#ln42" gr:x="0" gr:y="5" sortable="true" checkable="false" useCountQuery="false" entity="pkg2#ent11" displayAttributes="pkg2#ent11#att28 pkg2#ent11#att29 pkg2#ent11#att30">
+      <Link id="sv1#area2#page6#pwu2#ln4" name="Select" to="sv1#area2#page6#dau4" type="normal" validate="true" automaticCoupling="true"/>
+      <Link id="sv1#area2#page6#pwu2#ln42" name="Remove" to="sv1#area2#opg2#dlu6" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="113,76,-147,-59"/>
+    </PowerIndexUnit>
+    <DataUnit id="sv1#area2#page6#dau4" name="Music" customDescriptor="true" gr:x="120" gr:y="0" entity="pkg2#ent11" displayAll="true">
+      <Selector id="sv1#area2#page6#dau4#su7" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area2#page6#dau4#su7#kcond7" name="KeyCondition8" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <MultiMessageUnit id="sv1#area2#page6#mssu1" name="Message" gr:x="15" gr:y="115"/>
+    <EntryUnit gr:x="10" gr:y="230" id="sv1#area2#page6#enu7" name="Create Music" entity="pkg2#ent11" fieldOrder="sv1#area2#page6#enu7#fld12 sv1#area2#page6#enu7#fld13 sv1#area2#page6#enu7#sfld5 sv1#area2#page6#enu7#sfld7" linkOrder="sv1#area2#page6#enu7#ln29">
+      <Field id="sv1#area2#page6#enu7#fld12" name="Duration" type="string" modifiable="true" attribute="pkg2#ent11#att29"/>
+      <Field id="sv1#area2#page6#enu7#fld13" name="Name" type="string" modifiable="true" attribute="pkg2#ent11#att30"/>
+      <Link id="sv1#area2#page6#enu7#ln29" name="Add" to="sv1#area2#opg2#cru2" type="normal" validate="true" automaticCoupling="true"/>
+      <Link id="sv1#area2#page6#enu7#ln31" name="Flow31" to="sv1#area2#opg2#cnu3" type="transport" validate="true">
+        <LinkParameter id="sv1#area2#page6#enu7#ln31#par112" name="Genre:_PASSING" source="sv1#area2#page6#enu7#sfld5" passing="true"/>
+        <LinkParameter id="sv1#area2#page6#enu7#ln31#par123" name="Genre_KeyCondition17 [oid] [Genre] [Target]" source="sv1#area2#page6#enu7#sfld5" target="sv1#area2#opg2#cnu3#su11#kcond11.pkg2#ent15#att23"/>
+      </Link>
+      <SelectionField id="sv1#area2#page6#enu7#sfld5" name="Genre" type="string"/>
+      <SelectionField id="sv1#area2#page6#enu7#sfld7" name="Artist" type="string"/>
+      <VRules/>
+      <Link id="sv1#area2#page6#enu7#ln12" name="Flow12" to="sv1#area2#opg2#cnu4" type="transport" validate="true">
+        <LinkParameter id="sv1#area2#page6#enu7#ln12#par10" name="Artist_KeyCondition14 [oid] [Artist] [Target]" source="sv1#area2#page6#enu7#sfld7" target="sv1#area2#opg2#cnu4#su14#kcond14.pkg2#ent2#att11"/>
+        <LinkParameter id="sv1#area2#page6#enu7#ln12#par22" name="Artist_PASSING" source="sv1#area2#page6#enu7#sfld7" passing="true"/>
+      </Link>
+    </EntryUnit>
+    <SelectorUnit gr:x="145" gr:y="135" id="sv1#area2#page6#seu5" name="SelectorGenre" entity="pkg2#ent15" distinctAttributes="pkg2#ent15#att25">
+      <Link id="sv1#area2#page6#seu5#ln28" name="Flow28" to="sv1#area2#page6#enu7" type="transport" validate="true">
+        <LinkParameter id="sv1#area2#page6#seu5#ln28#par76" name="genreMusic_Genre: [label]" source="pkg2#ent15#att25Array" target="sv1#area2#page6#enu7#sfld5_label"/>
+        <LinkParameter id="sv1#area2#page6#seu5#ln28#par77" name="oid_Genre: [output]" source="pkg2#ent15#att23Array" target="sv1#area2#page6#enu7#sfld5_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit gr:x="145" gr:y="285" id="sv1#area2#page6#seu6" name="SelectorArtist" entity="pkg2#ent2">
+      <Link id="sv1#area2#page6#seu6#ln6" name="Flow6" to="sv1#area2#page6#enu7" type="transport" validate="true">
+        <LinkParameter id="sv1#area2#page6#seu6#ln6#par7" name="name_Artist [label]" source="pkg2#ent2#att12Array" target="sv1#area2#page6#enu7#sfld7_label"/>
+        <LinkParameter id="sv1#area2#page6#seu6#ln6#par8" name="oid_Artist [output]" source="pkg2#ent2#att11Array" target="sv1#area2#page6#enu7#sfld7_output"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area2#page6#mssu1"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area2#page6#pwu2">
+          <layout:Link link="sv1#area2#page6#pwu2#ln4"/>
+          <layout:Link link="sv1#area2#page6#pwu2#ln42"/>
+          <layout:Attribute attribute="pkg2#ent11#att28"/>
+          <layout:Attribute attribute="pkg2#ent11#att29"/>
+          <layout:Attribute attribute="pkg2#ent11#att30"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area2#page6#dau4">
+          <layout:Attribute attribute="pkg2#ent11#att29"/>
+          <layout:Attribute attribute="pkg2#ent11#att30"/>
+          <layout:Attribute attribute="pkg2#ent11#att22"/>
+          <layout:Attribute attribute="pkg2#ent11#att26"/>
+          <layout:Attribute attribute="pkg2#ent11#att31"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area2#page6#enu7">
+          <layout:Field field="sv1#area2#page6#enu7#fld12"/>
+          <layout:Field field="sv1#area2#page6#enu7#fld13"/>
+          <layout:Field field="sv1#area2#page6#enu7#sfld5"/>
+          <layout:Field field="sv1#area2#page6#enu7#sfld7"/>
+          <layout:Link link="sv1#area2#page6#enu7#ln29"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

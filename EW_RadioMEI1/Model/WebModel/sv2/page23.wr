@@ -1,0 +1,86 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page23" name="Home" landmark="true" ignoreMasterPage="false" gr:x="120" gr:y="355">
+  <ContentUnits>
+    <MultiMessageUnit id="sv2#page23#mssu6" name="Register" linkOrder="sv2#page23#mssu6#ln30 sv2#page23#mssu6#ln37" gr:x="0" gr:y="0">
+      <Link id="sv2#page23#mssu6#ln30" name="LogIn" to="sv2#page5#enu15" type="normal" automaticCoupling="true" validate="true" ajaxEnabled="false" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="LogIn" ajaxWindowWidth="400" ajaxWindowHeight="400" ajaxWindowAutoResizing="true" ajaxWindowClosable="true" ajaxWindowDraggable="true" ajaxWindowModal="true"/>
+      <Message xml:space="preserve">Welcome!!</Message>
+      <Link id="sv2#page23#mssu6#ln37" name="Register" to="sv2#page25#enu20" type="normal" automaticCoupling="true" validate="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Register" ajaxWindowWidth="400" ajaxWindowHeight="400" ajaxWindowResizable="false" ajaxWindowAutoResizing="true" ajaxWindowClosable="true" ajaxWindowModal="true"/>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page23#mssu6">
+          <layout:Link link="sv2#page23#mssu6#ln30"/>
+          <layout:Link link="sv2#page23#mssu6#ln37"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

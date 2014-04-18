@@ -1,0 +1,27 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="210" gr:y="140" id="mov2#mpkg1#opm2#opg7" name="Operation User" transaction="true">
+  <OperationUnits>
+    <CreateUnit gr:x="125" gr:y="0" id="mov2#mpkg1#opm2#opg7#cru9" name="Create8" entity="User">
+      <OKLink id="mov2#mpkg1#opm2#opg7#cru9#oln22" name="OKFlow20" to="mov2#mpkg1#opm2#opg7#pcu4" automaticCoupling="true"/>
+    </CreateUnit>
+    <ParameterCollectorUnit gr:x="240" gr:y="95" id="mov2#mpkg1#opm2#opg7#pcu4" name="Message Collector">
+      <OKLink id="mov2#mpkg1#opm2#opg7#pcu4#oln25" name="OKFlow25" to="mov2#mpkg1#opm2#okcu3">
+        <LinkParameter id="mov2#mpkg1#opm2#opg7#pcu4#oln25#par29" name="User Saved_Message" sourceValue="User Saved" target="mov2#mpkg1#opm2#okcu3#ocp7"/>
+      </OKLink>
+    </ParameterCollectorUnit>
+    <IsNotNullUnit gr:x="0" gr:y="95" id="mov2#mpkg1#opm2#opg7#inn4" name="Is not null?">
+      <KOLink id="mov2#mpkg1#opm2#opg7#inn4#kln13" name="Null" to="mov2#mpkg1#opm2#opg7#cru9" automaticCoupling="true"/>
+      <OKLink id="mov2#mpkg1#opm2#opg7#inn4#oln24" name="OK" to="mov2#mpkg1#opm2#opg7#mfu4">
+        <LinkParameter id="mov2#mpkg1#opm2#opg7#inn4#oln24#par24" name="Input Value_PASSING" source="inputValue" passing="true"/>
+      </OKLink>
+    </IsNotNullUnit>
+    <ModifyUnit gr:x="125" gr:y="175" id="mov2#mpkg1#opm2#opg7#mfu4" name="Update3" entity="User">
+      <Selector id="mov2#mpkg1#opm2#opg7#mfu4#su13" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg1#opm2#opg7#mfu4#su13#kcond13" name="KeyCondition12" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg1#opm2#opg7#mfu4#oln23" name="OKFlow21" to="mov2#mpkg1#opm2#opg7#pcu4" automaticCoupling="true"/>
+    </ModifyUnit>
+  </OperationUnits>
+  <KOLink id="mov2#mpkg1#opm2#opg7#kln14" name="Message" to="mov2#mpkg1#opm2#kocu3">
+    <LinkParameter id="mov2#mpkg1#opm2#opg7#kln14#par28" name="User not saved_Message" sourceValue="User not saved" target="mov2#mpkg1#opm2#kocu3#ocp6"/>
+  </KOLink>
+</OperationGroup>

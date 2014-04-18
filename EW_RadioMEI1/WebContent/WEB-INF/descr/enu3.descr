@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.EntityBasedEntryUnitService" name="Form3">
+  <Entity>ent4</Entity>
+  <Query entity="ent4">
+    <Input id="p0" param="enu3.att3" type="integer" implied="false" expandStyle="in"/>
+    <HQL>from Livros a_livros
+      <Where defaultPolicy="" allImplied="false">(({[p0]a_livros.oid in(?)}))</Where>
+    </HQL>
+  </Query>
+  <FormFields>
+    <Field id="fld2" name="titulo" type="string" localized="false" attributeId="att4"></Field>
+    <Field id="fld3" name="numPages" type="integer" localized="true" attributeId="att5"></Field>
+    <Field id="fld5" name="description" type="string" localized="false" attributeId="att6"></Field>
+    <SelectionField id="sfld2" name="LivrosToGenre" type="string" localized="false" value="" splitOutput="" roleId="role3">
+      <Slot id="sfld2_label" label="true" output="false"/>
+      <Slot id="sfld2_output" label="false" output="true"/>
+    </SelectionField>
+    <MultiSelectionField id="msfld3" name="LivrosToUser" type="string" localized="false" value="" splitOutput="" roleId="role2">
+      <Slot id="msfld3_label" label="true" output="false"/>
+      <Slot id="msfld3_output" label="false" output="true"/>
+    </MultiSelectionField>
+  </FormFields>
+  <wr:Validation xmlns:wr="http://www.webratio.com/2013/WebML/WRValidation">
+    <wr:ValidationLink elementId="enu3" linkId="ln4" action="validate"/>
+  </wr:Validation>
+</Descriptor>

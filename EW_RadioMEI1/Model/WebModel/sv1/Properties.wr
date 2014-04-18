@@ -1,0 +1,16 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Administrator" protected="false" landmarks="sv1#area1 sv1#area2 sv1#area3 sv1#area5" homePage="sv1#area1#page12">
+  <OperationUnits>
+    <DeleteUnit gr:x="300" gr:y="350" id="sv1#dlu1" name="Delete1" entity="User">
+      <Selector id="sv1#dlu1#su9" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#dlu1#su9#kcond9" name="KeyCondition9" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv1#dlu1#oln6" name="OKFlow6" to="sv1#area1#page12#mssu3" gr:bendpoints="67,65,-68,25">
+        <LinkParameter id="sv1#dlu1#oln6#par2" name="User successfully deleted_Shown Messages" sourceValue="User successfully deleted" target="sv1#area1#page12#mssu3.shownMessages"/>
+      </OKLink>
+      <KOLink id="sv1#dlu1#kln5" name="KOFlow5" to="sv1#area1#page12#mssu3" gr:bendpoints="67,30,-58,-30;84,-29,-46,41">
+        <LinkParameter id="sv1#dlu1#kln5#par1" name="Category non deleted. Contact the System Administrator_Shown Messages" sourceValue="User non deleted. Contact the System Administrator" target="sv1#area1#page12#mssu3.shownMessages"/>
+      </KOLink>
+    </DeleteUnit>
+    <LogoutUnit id="sv1#lou2" name="Logout1" gr:x="115" gr:y="80" siteView="sv2"/>
+  </OperationUnits>
+</SiteView>

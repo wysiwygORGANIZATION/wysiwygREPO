@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.db.DataUnitService" name="User">
+  <Query entity="User">
+    <Input id="p0" param="kcond8.userOID" type="integer" implied="false" expandStyle="in"/>
+    <HQL>from User a_user
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_user.oid in(?)}))</Where>
+    </HQL>
+  </Query>
+</Descriptor>

@@ -1,0 +1,173 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area9#page27" name="Programas NewSounds" gr:x="0" gr:y="0">
+  <ContentUnits>
+    <SelectorUnit id="sv2#area9#page27#seu29" name="SelectorYear" gr:x="100" gr:y="0" distinct="false" maxResults="100" entity="pkg4#ent24">
+      <Link id="sv2#area9#page27#seu29#ln118" name="Flow17" to="sv2#area9#page27#enu25" type="transport" validate="true">
+        <LinkParameter id="sv2#area9#page27#seu29#ln118#par218" name="Year_Selection Year [label]" source="pkg4#ent24#att50Array" target="sv2#area9#page27#enu25#sfld17_label"/>
+        <LinkParameter id="sv2#area9#page27#seu29#ln118#par219" name="oid_Selection Year [output]" source="pkg4#ent24#att49Array" target="sv2#area9#page27#enu25#sfld17_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit id="sv2#area9#page27#seu30" name="SelectorMonth" gr:x="215" gr:y="5" distinct="false" maxResults="100" entity="pkg4#ent22">
+      <Link id="sv2#area9#page27#seu30#ln119" name="Flow21" to="sv2#area9#page27#enu25" type="transport" validate="true">
+        <LinkParameter id="sv2#area9#page27#seu30#ln119#par220" name="Month_Selection Month [label]" source="pkg4#ent22#att47Array" target="sv2#area9#page27#enu25#sfld18_label"/>
+        <LinkParameter id="sv2#area9#page27#seu30#ln119#par221" name="oid_Selection Month [output]" source="pkg4#ent22#att46Array" target="sv2#area9#page27#enu25#sfld18_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit id="sv2#area9#page27#seu31" name="SelectorWeek" gr:x="0" gr:y="5" distinct="false" maxResults="100" entity="pkg4#ent20">
+      <Link id="sv2#area9#page27#seu31#ln120" name="Flow16" to="sv2#area9#page27#enu25" type="transport" validate="true">
+        <LinkParameter id="sv2#area9#page27#seu31#ln120#par222" name="Week_Selection Week [label]" source="pkg4#ent20#att43Array" target="sv2#area9#page27#enu25#sfld19_label"/>
+        <LinkParameter id="sv2#area9#page27#seu31#ln120#par223" name="oid_Selection Week [output]" source="pkg4#ent20#att42Array" target="sv2#area9#page27#enu25#sfld19_output"/>
+      </Link>
+    </SelectorUnit>
+    <EntryUnit id="sv2#area9#page27#enu25" name="NewSounds" linkOrder="sv2#area9#page27#enu25#ln121" gr:x="115" gr:y="130" fieldOrder="sv2#area9#page27#enu25#sfld17 sv2#area9#page27#enu25#sfld18 sv2#area9#page27#enu25#sfld19" entity="pkg4#ent21">
+      <SelectionField id="sv2#area9#page27#enu25#sfld17" name="Selection Year" type="string"/>
+      <SelectionField id="sv2#area9#page27#enu25#sfld18" name="Selection Month" type="string"/>
+      <SelectionField id="sv2#area9#page27#enu25#sfld19" name="Selection Week" type="string"/>
+      <VRules/>
+      <Link id="sv2#area9#page27#enu25#ln121" name="Details" to="sv2#area9#page27#pwu16" type="normal" validate="true">
+        <LinkParameter id="sv2#area9#page27#enu25#ln121#par239" name="Selection Month_RoleConditionMonthtoNS [oid]" source="sv2#area9#page27#enu25#sfld18" target="sv2#area9#page27#pwu16#su53#rcond33.pkg4#ent22#att46"/>
+        <LinkParameter id="sv2#area9#page27#enu25#ln121#par240" name="Selection Week_RoleConditionWeektoNS [oid]" source="sv2#area9#page27#enu25#sfld19" target="sv2#area9#page27#pwu16#su53#rcond31.pkg4#ent20#att42"/>
+        <LinkParameter id="sv2#area9#page27#enu25#ln121#par241" name="Selection Year_RoleConditionYeartoNS [oid]" source="sv2#area9#page27#enu25#sfld17" target="sv2#area9#page27#pwu16#su53#rcond32.pkg4#ent24#att49"/>
+      </Link>
+    </EntryUnit>
+    <PowerIndexUnit id="sv2#area9#page27#pwu16" name="NewSounds" linkOrder="sv2#area9#page27#pwu16#ln122" gr:x="45" gr:y="245" sortable="true" checkable="false" useCountQuery="false" entity="pkg3#ent18" displayAttributes="pkg3#ent18#att38 pkg3#ent18#att39">
+      <Selector id="sv2#area9#page27#pwu16#su53" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#area9#page27#pwu16#su53#rcond31" name="RoleConditionWeektoNS" predicate="in" implied="false" role="rel18#role36.rel16#role31.rel20#role40"/>
+        <RelationshipRoleCondition id="sv2#area9#page27#pwu16#su53#rcond32" name="RoleConditionYeartoNS" predicate="in" implied="false" role="rel15#role30.rel16#role31.rel20#role40"/>
+        <RelationshipRoleCondition id="sv2#area9#page27#pwu16#su53#rcond33" name="RoleConditionMonthtoNS" predicate="in" implied="false" role="rel17#role34.rel16#role31.rel20#role40"/>
+      </Selector>
+      <Link id="sv2#area9#page27#pwu16#ln122" name="Details" to="sv2#area9#page28#enu26" type="normal" validate="true" ajaxEnabled="true" ajaxOpenWindow="true" ajaxWindowWidth="500" ajaxWindowHeight="500" ajaxWindowAutoResizing="true" ajaxWindowClosable="true" ajaxWindowModal="true">
+        <LinkParameter id="sv2#area9#page27#pwu16#ln122#par227" name="oid_FieldID" source="data[].pkg3#ent18#att37" target="sv2#area9#page28#enu26#fld48_slot"/>
+        <LinkParameter id="sv2#area9#page27#pwu16#ln122#par228" name="Votes_FieldVotes" source="data[].pkg3#ent18#att38" target="sv2#area9#page28#enu26#fld52_slot"/>
+        <LinkParameter id="sv2#area9#page27#pwu16#ln122#par230" name="Name_Playlist Name" source="data[].pkg3#ent18#att39" target="sv2#area9#page28#enu26#fld53_slot"/>
+        <LinkParameter id="sv2#area9#page27#pwu16#ln122#par242" name="oid_Key Condition [oid]" source="data[].pkg3#ent18#att37" target="sv2#area9#page28#enu26.pkg3#ent18#att37"/>
+      </Link>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area9#page27#enu25">
+          <layout:Field field="sv2#area9#page27#enu25#sfld17"/>
+          <layout:Field field="sv2#area9#page27#enu25#sfld18"/>
+          <layout:Field field="sv2#area9#page27#enu25#sfld19"/>
+          <layout:Link link="sv2#area9#page27#enu25#ln121"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area9#page27#pwu16">
+          <layout:Link link="sv2#area9#page27#pwu16#ln122"/>
+          <layout:Attribute attribute="pkg3#ent18#att38"/>
+          <layout:Attribute attribute="pkg3#ent18#att39"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,0 +1,112 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area5#page11" name="Genre" landmark="false" ignoreMasterPage="true" gr:x="190" gr:y="0">
+  <ContentUnits>
+    <PowerIndexUnit id="sv1#area5#page11#pwu7" name="Genre List" linkOrder="sv1#area5#page11#pwu7#ln57 sv1#area5#page11#pwu7#ln58" gr:x="0" gr:y="5" sortable="true" checkable="false" useCountQuery="false" entity="pkg2#ent15" displayAttributes="pkg2#ent15#att23 pkg2#ent15#att25">
+      <Link id="sv1#area5#page11#pwu7#ln57" name="Select" to="sv1#area5#page11#dau12" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv1#area5#page11#pwu7#ln58" name="Remove" to="sv1#area5#opg12#dlu2" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="113,76,-147,-59"/>
+    </PowerIndexUnit>
+    <DataUnit id="sv1#area5#page11#dau12" name="Genre" customDescriptor="true" gr:x="120" gr:y="0" entity="pkg2#ent15" displayAttributes="pkg2#ent15#att23 pkg2#ent15#att25">
+      <Selector id="sv1#area5#page11#dau12#su32" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area5#page11#dau12#su32#kcond30" name="KeyCondition8" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <MultiMessageUnit id="sv1#area5#page11#mssu4" name="Message" gr:x="0" gr:y="115"/>
+    <EntryUnit id="sv1#area5#page11#enu6" name="Create Genre" gr:x="0" gr:y="200" fieldOrder="sv1#area5#page11#enu6#fld2" linkOrder="sv1#area5#page11#enu6#ln59" entity="pkg2#ent15">
+      <Field id="sv1#area5#page11#enu6#fld2" name="name" type="string" modifiable="true" attribute="pkg2#ent15#att25"/>
+      <Link id="sv1#area5#page11#enu6#ln59" name="Add" to="sv1#area5#opg12#cru16" type="normal" validate="true">
+        <LinkParameter id="sv1#area5#page11#enu6#ln59#par125" name="Genre Object_Genre Object" source="entityBean" target="sv1#area5#opg12#cru16.entityBeans"/>
+        <LinkParameter id="sv1#area5#page11#enu6#ln59#par126" name="Key [oid]_oid" source="key.pkg2#ent15#att23" target="sv1#area5#opg12#cru16.pkg2#ent15#att23"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area5#page11#mssu4"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area5#page11#pwu7">
+          <layout:Link link="sv1#area5#page11#pwu7#ln57"/>
+          <layout:Link link="sv1#area5#page11#pwu7#ln58"/>
+          <layout:Attribute attribute="pkg2#ent15#att23"/>
+          <layout:Attribute attribute="pkg2#ent15#att25"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area5#page11#dau12">
+          <layout:Attribute attribute="pkg2#ent15#att23"/>
+          <layout:Attribute attribute="pkg2#ent15#att25"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area5#page11#enu6">
+          <layout:Link link="sv1#area5#page11#enu6#ln59"/>
+          <layout:Field field="sv1#area5#page11#enu6#fld2"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

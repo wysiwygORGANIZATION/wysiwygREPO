@@ -1,0 +1,63 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="30" gr:y="0" id="sv2#area4#page14" name="My Cart" landmark="false">
+  <ContentUnits>
+    <SelectorUnit id="sv2#area4#page14#seu16" name="Selector" gr:x="0" gr:y="0" entity="pkg1#ent5" distinctAttributes="pkg1#ent5#att13">
+      <Selector id="sv2#area4#page14#seu16#su19" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#area4#page14#seu16#su19#rcond11" name="RoleCondition5" predicate="in" implied="false" role="rel4#role6"/>
+      </Selector>
+      <Link id="sv2#area4#page14#seu16#ln61" name="Flow71" to="sv2#area4#page14#pwu11" type="transport" validate="true">
+        <LinkParameter id="sv2#area4#page14#seu16#ln61#par133" name="oid_RoleCondition7 [oid]" source="pkg1#ent5#att13Array" target="sv2#area4#page14#pwu11#su44#rcond24.pkg1#ent5#att13"/>
+      </Link>
+    </SelectorUnit>
+    <GetUnit id="sv2#area4#page14#gtu6" name="User ID" gr:x="150" gr:y="10" contextParameters="UserCtxParam">
+      <Link id="sv2#area4#page14#gtu6#ln62" name="Flow69" to="sv2#area4#page14#seu16" type="transport" automaticCoupling="true" validate="true"/>
+    </GetUnit>
+    <PowerIndexUnit id="sv2#area4#page14#pwu11" entity="pkg1#ent1" displayAttributes="pkg1#ent1#att1 pkg1#ent1#att3 pkg1#ent1#att4 pkg1#ent1#att5 pkg1#ent1#att2" sortable="true" checkable="true" useCountQuery="false" gr:x="105" gr:y="140" name="Music in Cart" linkOrder="sv2#area4#page14#pwu11#ln106">
+      <Selector id="sv2#area4#page14#pwu11#su44" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#area4#page14#pwu11#su44#rcond24" role="rel1#role1" predicate="in" implied="false" name="RoleCondition7"/>
+      </Selector>
+      <Link id="sv2#area4#page14#pwu11#ln106" name="Add to PlayList" to="sv2#area4#page20#enu19" type="normal" validate="true" ajaxOpenWindow="true" ajaxWindowUseTitle="false" ajaxWindowWidth="300" ajaxWindowHeight="300" ajaxWindowAutoResizing="true" ajaxWindowClosable="true" ajaxWindowDraggable="true" ajaxWindowModal="true">
+        <LinkParameter id="sv2#area4#page14#pwu11#ln106#par194" name="CartItemToMusic.oid (Single Row)_musicID" source="data[].rel2#role4_pkg2#ent11#att28" target="sv2#area4#page20#enu19#fld39_slot"/>
+        <LinkParameter id="sv2#area4#page14#pwu11#ln106#par195" name="CartItemToMusic.oid (Single Row)_PASSING" source="data[].rel2#role4_pkg2#ent11#att28" passing="true"/>
+      </Link>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area4#page14#pwu11">
+          <layout:Attribute attribute="pkg1#ent1#att1"/>
+          <layout:Attribute attribute="pkg1#ent1#att3"/>
+          <layout:Attribute attribute="pkg1#ent1#att4"/>
+          <layout:Attribute attribute="pkg1#ent1#att5"/>
+          <layout:Attribute attribute="pkg1#ent1#att2"/>
+          <layout:Link link="sv2#area4#page14#pwu11#ln106"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

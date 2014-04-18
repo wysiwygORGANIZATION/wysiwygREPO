@@ -1,0 +1,13 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="610" gr:y="410" id="sv2#area4" name="Cart" landmark="true" defaultPage="sv2#area4#page14">
+  <OperationUnits>
+    <ConnectUnit gr:x="0" gr:y="310" id="sv2#area4#cnu1" name="Connect1" relationship="rel11#role22">
+      <SourceSelector id="sv2#area4#cnu1#su41" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area4#cnu1#su41#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv2#area4#cnu1#su42" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area4#cnu1#su42#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
+      </TargetSelector>
+      <OKLink id="sv2#area4#cnu1#oln30" name="OKFlow30" to="sv2#area4#page14" automaticCoupling="true"/>
+    </ConnectUnit>
+  </OperationUnits>
+</Area>

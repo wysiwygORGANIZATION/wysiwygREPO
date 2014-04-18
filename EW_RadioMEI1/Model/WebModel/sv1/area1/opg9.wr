@@ -1,0 +1,19 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="165" id="sv1#area1#opg9" name="Operation Group" transaction="true">
+  <OperationUnits>
+    <CreateUnit id="sv1#area1#opg9#cru14" name="Add User" gr:x="0" gr:y="0" entity="User">
+      <OKLink id="sv1#area1#opg9#cru14#oln28" name="OKFlow28" to="sv1#area1#opg9#cnu2" automaticCoupling="true"/>
+    </CreateUnit>
+    <ConnectUnit gr:x="45" gr:y="135" id="sv1#area1#opg9#cnu2" name="Connector" relationship="User2Group">
+      <SourceSelector id="sv1#area1#opg9#cnu2#su16" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area1#opg9#cnu2#su16#kcond16" name="KeyCondition16" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv1#area1#opg9#cnu2#su17" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area1#opg9#cnu2#su17#kcond17" name="KeyCondition17" predicate="in" implied="false"/>
+      </TargetSelector>
+      <OKLink id="sv1#area1#opg9#cnu2#oln29" name="OKFlow29" to="sv1#area1#page12#mssu3" gr:bendpoints="284,53,-241,28">
+        <LinkParameter id="sv1#area1#opg9#cnu2#oln29#par60" name="User created with success_Shown Messages" sourceValue="User created with success" target="sv1#area1#page12#mssu3.shownMessages"/>
+      </OKLink>
+    </ConnectUnit>
+  </OperationUnits>
+  <KOLink id="sv1#area1#opg9#kln19" name="KOFlow19" to="sv1#area1#page19#enu12" automaticCoupling="true" gr:bendpoints="107,-13,-63,-23"/>
+</OperationGroup>

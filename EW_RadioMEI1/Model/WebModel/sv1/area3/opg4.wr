@@ -1,0 +1,20 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1#area3#opg4" name="Artist Operation" transaction="true" gr:x="0" gr:y="15">
+  <OperationUnits>
+    <CreateUnit id="sv1#area3#opg4#cru3" name="Add" gr:x="5" gr:y="140" entity="pkg2#ent2">
+      <OKLink id="sv1#area3#opg4#cru3#oln16" name="OKFlow16" to="sv1#area3#page10#mssu2" gr:bendpoints="145,105,-190,-50">
+        <LinkParameter id="sv1#area3#opg4#cru3#oln16#par98" name="Artist created with success_Shown Messages" sourceValue="Artist created with success" target="sv1#area3#page10#mssu2.shownMessages"/>
+      </OKLink>
+    </CreateUnit>
+    <DeleteUnit id="sv1#area3#opg4#dlu5" name="Delete2" gr:x="0" gr:y="0" entity="pkg2#ent2">
+      <Selector id="sv1#area3#opg4#dlu5#su22" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area3#opg4#dlu5#su22#kcond22" name="KeyCondition12" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv1#area3#opg4#dlu5#oln17" name="OKFlow11" to="sv1#area3#page10#mssu2">
+        <LinkParameter id="sv1#area3#opg4#dlu5#oln17#par99" name="Music Removed with Success_Shown Messages" target="sv1#area3#page10#mssu2.shownMessages" sourceValue="Music removed with success."/>
+      </OKLink>
+      <KOLink id="sv1#area3#opg4#dlu5#kln12" name="KOFlow10" to="sv1#area3#page10#mssu2" gr:bendpoints="-48,59,62,-31">
+        <LinkParameter id="sv1#area3#opg4#dlu5#kln12#par100" name="Error removing music. Contact administrator._Shown Messages" target="sv1#area3#page10#mssu2.shownMessages" sourceValue="Error removing music. Contact administrator."/>
+      </KOLink>
+    </DeleteUnit>
+  </OperationUnits>
+</OperationGroup>

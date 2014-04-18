@@ -1,0 +1,91 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area9#page28" name="Playlist Details" layout:pageLayout="WRDefault/Empty" gr:x="5" gr:y="440">
+  <ContentUnits>
+    <MultiMessageUnit id="sv2#area9#page28#mssu8" name="Error" gr:x="25" gr:y="125"/>
+    <EntryUnit id="sv2#area9#page28#enu26" name="Vote" linkOrder="sv2#area9#page28#enu26#ln124 sv2#area9#page28#enu26#ln125" gr:x="0" gr:y="5" entity="pkg3#ent18">
+      <Field id="sv2#area9#page28#enu26#fld48" name="FieldID" type="string" modifiable="false" preloaded="true" hidden="true"/>
+      <Field id="sv2#area9#page28#enu26#fld52" name="Votes" type="string" modifiable="false" preloaded="true" hidden="false"/>
+      <Link id="sv2#area9#page28#enu26#ln124" name="Add Vote" to="sv2#mathu1" type="normal" validate="true" ajaxEnabled="true" gr:bendpoints="-121,1,73,-69">
+        <LinkParameter id="sv2#area9#page28#enu26#ln124#par232" name="FieldVotes_first" source="sv2#area9#page28#enu26#fld52" target="sv2#mathu1#mathv1"/>
+        <LinkParameter id="sv2#area9#page28#enu26#ln124#par233" name="1_second" target="sv2#mathu1#mathv2" sourceValue="1"/>
+      </Link>
+      <Link id="sv2#area9#page28#enu26#ln125" name="Submit" to="sv2#mfu1" type="normal" validate="true" ajaxEnabled="true">
+        <LinkParameter id="sv2#area9#page28#enu26#ln125#par243" name="Key [oid]_KeyCondition18 [oid]" source="key.pkg3#ent18#att37" target="sv2#mfu1#su52#kcond6.pkg3#ent18#att37"/>
+        <LinkParameter id="sv2#area9#page28#enu26#ln125#par244" name="FieldID_NewSoundsPlaylist.oid(PlayListToNewSoundsPlaylist)" source="sv2#area9#page28#enu26#fld48" target="sv2#mfu1.rel20#role39.pkg4#ent23#att48"/>
+        <LinkParameter id="sv2#area9#page28#enu26#ln125#par245" name="PlayList Object_PlayList Object" source="entityBean" target="sv2#mfu1.entityBeans"/>
+        <LinkParameter id="sv2#area9#page28#enu26#ln125#par246" name="FieldID_PlayListMusics.oid(PlayListToPlayListMusics)" source="sv2#area9#page28#enu26#fld48" target="sv2#mfu1.rel11#role21.pkg3#ent19#att41"/>
+        <LinkParameter id="sv2#area9#page28#enu26#ln125#par247" name="FieldID_User.oid(PlayListToUser)" source="sv2#area9#page28#enu26#fld48" target="sv2#mfu1.rel13#role25.userOID"/>
+        <LinkParameter id="sv2#area9#page28#enu26#ln125#par248" name="Votes_votes" source="sv2#area9#page28#enu26#fld52" target="sv2#mfu1.pkg3#ent18#att38"/>
+      </Link>
+      <Field id="sv2#area9#page28#enu26#fld53" name="Playlist Name" type="string" modifiable="false" preloaded="true"/>
+      <Link id="sv2#area9#page28#enu26#ln126" name="Flow126" to="sv2#area9#page28#inu1" type="transport" validate="true">
+        <LinkParameter id="sv2#area9#page28#enu26#ln126#par252" name="FieldID_RoleCondition35 [oid]" source="sv2#area9#page28#enu26#fld48" target="sv2#area9#page28#inu1#su55#rcond35.pkg3#ent19#att41"/>
+      </Link>
+    </EntryUnit>
+    <IndexUnit gr:x="155" gr:y="0" id="sv2#area9#page28#inu1" name="Playlist Musics" entity="pkg2#ent11" displayAttributes="pkg2#ent11#att29 pkg2#ent11#att30 pkg2#ent11#att22 pkg2#ent11#att26 pkg2#ent11#att31">
+      <Selector id="sv2#area9#page28#inu1#su55" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#area9#page28#inu1#su55#rcond35" name="RoleCondition35" predicate="in" implied="false" role="rel12#role23"/>
+      </Selector>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area9#page28#mssu8"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area9#page28#enu26">
+          <layout:Field field="sv2#area9#page28#enu26#fld52"/>
+          <layout:Field field="sv2#area9#page28#enu26#fld53"/>
+          <layout:Link link="sv2#area9#page28#enu26#ln124"/>
+          <layout:Link link="sv2#area9#page28#enu26#ln125"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area9#page28#inu1">
+          <layout:Attribute attribute="pkg2#ent11#att29"/>
+          <layout:Attribute attribute="pkg2#ent11#att30"/>
+          <layout:Attribute attribute="pkg2#ent11#att22"/>
+          <layout:Attribute attribute="pkg2#ent11#att26"/>
+          <layout:Attribute attribute="pkg2#ent11#att31"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

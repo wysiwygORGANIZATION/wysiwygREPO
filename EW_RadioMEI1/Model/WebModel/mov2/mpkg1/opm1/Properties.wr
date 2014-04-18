@@ -1,0 +1,22 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="100" id="mov2#mpkg1#opm1" name="Insert in Cart">
+  <OperationUnits>
+    <InputCollectorUnit gr:x="0" gr:y="150" id="mov2#mpkg1#opm1#icu1" name="Input Port">
+      <InputCollectorParameter id="mov2#mpkg1#opm1#icu1#icp2" name="Music.oid(CartItemToMusic)"/>
+      <InputCollectorParameter id="mov2#mpkg1#opm1#icu1#icp3" name="CartItem Object"/>
+      <InputCollectorParameter id="mov2#mpkg1#opm1#icu1#icp4" name="Cart.oid(CartItemToCart)"/>
+      <OKLink id="mov2#mpkg1#opm1#icu1#oln10" to="mov2#mpkg1#opm1#cru7" validate="true" name="Flow51">
+        <LinkParameter id="mov2#mpkg1#opm1#icu1#oln10#par119" name="_Cart.oid(CartItemToCart)" target="mov2#mpkg1#opm1#cru7.rel1#role2.pkg1#ent5#att13" source="mov2#mpkg1#opm1#icu1#icp4"/>
+        <LinkParameter id="mov2#mpkg1#opm1#icu1#oln10#par118" source="mov2#mpkg1#opm1#icu1#icp2" name="musicID_Music.oid(CartItemToMusic)" target="mov2#mpkg1#opm1#cru7.rel2#role4.pkg2#ent11#att28"/>
+        <LinkParameter id="mov2#mpkg1#opm1#icu1#oln10#par117" source="mov2#mpkg1#opm1#icu1#icp3" name="CartItem Object_CartItem Object" target="mov2#mpkg1#opm1#cru7.entityBeans"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="700" gr:y="0" id="mov2#mpkg1#opm1#okcu1" name="OK Port1">
+      <OutputCollectorParameter id="mov2#mpkg1#opm1#okcu1#ocp1" name="Success _Shown Messages"/>
+    </OKCollectorUnit>
+    <CreateUnit id="mov2#mpkg1#opm1#cru7" name="Create5" gr:x="300" gr:y="0" entity="pkg1#ent1">
+      <OKLink id="mov2#mpkg1#opm1#cru7#oln27" to="mov2#mpkg1#opm1#okcu1" name="OKFlow2">
+        <LinkParameter id="mov2#mpkg1#opm1#cru7#oln27#par124" sourceValue="Success " name="Success _Shown Messages" target="mov2#mpkg1#opm1#okcu1#ocp1"/>
+      </OKLink>
+    </CreateUnit>
+  </OperationUnits>
+</OperationModule>

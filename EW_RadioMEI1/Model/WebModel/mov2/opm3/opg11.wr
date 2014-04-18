@@ -1,0 +1,22 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#opm3#opg11" name="Save Cart" transaction="true" gr:x="125" gr:y="165">
+  <OperationUnits>
+    <SelectorUnit gr:x="0" gr:y="0" id="mov2#opm3#opg11#seu7" name="Selector7" entity="pkg1#ent5" distinctAttributes="pkg1#ent5#att13">
+      <Selector id="mov2#opm3#opg11#seu7#su26" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov2#opm3#opg11#seu7#su26#rcond5" name="RoleCondition5" predicate="in" implied="false" role="rel4#role6"/>
+      </Selector>
+      <OKLink id="mov2#opm3#opg11#seu7#oln43" name="OKFlow43" to="mov2#opm3#opg11#inn1">
+        <LinkParameter id="mov2#opm3#opg11#seu7#oln43#par131" name="oid_Input" target="mov2#opm3#opg11#inn1.isnotnull" source="pkg1#ent5#att13Array"/>
+      </OKLink>
+    </SelectorUnit>
+    <CreateUnit gr:x="350" gr:y="10" id="mov2#opm3#opg11#cru10" name="Create10" entity="pkg1#ent1">
+      <OKLink id="mov2#opm3#opg11#cru10#oln39" name="OKFlow39" to="mov2#opm3#okcu2" automaticCoupling="true"/>
+    </CreateUnit>
+    <IsNotNullUnit gr:x="140" gr:y="20" id="mov2#opm3#opg11#inn1" name="Is Not Null1">
+      <Link id="mov2#opm3#opg11#inn1#ln64" name="Flow64" to="mov2#opm3#opg11#cru10" type="transport" validate="true" gr:bendpoints="75,-98,-205,-88">
+        <LinkParameter id="mov2#opm3#opg11#inn1#ln64#par132" name="Input Value_Cart.oid(CartItemToCart)" target="mov2#opm3#opg11#cru10.rel1#role2.pkg1#ent5#att13" source="inputValue"/>
+      </Link>
+      <KOLink id="mov2#opm3#opg11#inn1#kln1" name="KOFlow1" to="mov2#opm3#kocu1" gr:bendpoints="126,50,-399,80;353,49,-172,79"/>
+      <OKLink id="mov2#opm3#opg11#inn1#oln31" name="OKFlow31" to="mov2#opm3#opg11#cru10"/>
+    </IsNotNullUnit>
+  </OperationUnits>
+</OperationGroup>

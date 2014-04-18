@@ -1,0 +1,12 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-80" gr:y="-165" id="sv2#area6" name="Music" landmark="true" defaultPage="sv2#area6#page1">
+  <OperationUnits>
+    <ModuleInstanceUnit gr:x="470" gr:y="345" id="sv2#area6#miu2" moduleId="mov2#opm3">
+      <OKLink id="sv2#area6#miu2#oln11" to="sv2#area6#page1#mssu5" name="OKFlow2">
+        <LinkParameter id="sv2#area6#miu2#oln11#par135" name="Sucess_Shown Messages" sourceValue="Sucess" target="sv2#area6#page1#mssu5.shownMessages"/>
+      </OKLink>
+      <KOLink id="sv2#area6#miu2#kln2" name="KOFlow2" to="sv2#area6#page1#mssu5" gr:bendpoints="-84,-136,51,144">
+        <LinkParameter id="sv2#area6#miu2#kln2#par134" name="Error_Shown Messages" sourceValue="Error" target="sv2#area6#page1#mssu5.shownMessages"/>
+      </KOLink>
+    </ModuleInstanceUnit>
+  </OperationUnits>
+</Area>

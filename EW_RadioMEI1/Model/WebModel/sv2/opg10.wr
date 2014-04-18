@@ -1,0 +1,28 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2#opg10" name="Create User Profile and Log In" transaction="true" gr:x="175" gr:y="660">
+  <OperationUnits>
+    <CreateUnit id="sv2#opg10#cru15" name="Save" gr:x="0" gr:y="0" entity="User" linkOrder="sv2#opg10#cru15#ln94">
+      <OKLink id="sv2#opg10#cru15#oln15" name="OKFlow15" to="sv2#opg10#cnu10">
+        <LinkParameter id="sv2#opg10#cru15#oln15#par203" name="oid_KeyCondition46 [oid] [User] [Source]" source="userOIDArray" target="sv2#opg10#cnu10#su47#kcond46.userOID"/>
+      </OKLink>
+      <Link id="sv2#opg10#cru15#ln94" name="Flow94" to="sv2#lgu2" type="transport" validate="true">
+        <LinkParameter id="sv2#opg10#cru15#ln94#par201" name="userName_Username" source="userNameArray" target="sv2#lgu2.username"/>
+        <LinkParameter id="sv2#opg10#cru15#ln94#par202" name="password_Password" source="passwordArray" target="sv2#lgu2.password"/>
+      </Link>
+    </CreateUnit>
+    <CreateUnit gr:x="0" gr:y="125" id="sv2#opg10#cru4" name="Create4" entity="pkg1#ent5" linkOrder="sv2#opg10#cru4#ln93">
+      <OKLink id="sv2#opg10#cru4#oln3" name="OKFlow3" to="sv2#opg10#cru15" automaticCoupling="true"/>
+      <Link id="sv2#opg10#cru4#ln93" name="Flow93" to="sv2#opg10#cnu10" type="transport" validate="true">
+        <LinkParameter id="sv2#opg10#cru4#ln93#par200" name="oid_KeyCondition47 [oid] [Cart] [Target]" source="pkg1#ent5#att13Array" target="sv2#opg10#cnu10#su48#kcond47.pkg1#ent5#att13"/>
+      </Link>
+    </CreateUnit>
+    <ConnectUnit gr:x="95" gr:y="85" id="sv2#opg10#cnu10" name="Connect10" relationship="rel4#role6">
+      <SourceSelector id="sv2#opg10#cnu10#su47" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#opg10#cnu10#su47#kcond46" name="KeyCondition46" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv2#opg10#cnu10#su48" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#opg10#cnu10#su48#kcond47" name="KeyCondition47" predicate="in" implied="false"/>
+      </TargetSelector>
+      <OKLink id="sv2#opg10#cnu10#oln55" name="OKFlow55" to="sv2#lgu2"/>
+    </ConnectUnit>
+  </OperationUnits>
+</OperationGroup>

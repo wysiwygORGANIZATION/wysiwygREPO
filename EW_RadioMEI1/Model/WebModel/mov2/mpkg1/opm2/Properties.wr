@@ -1,0 +1,27 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="0" id="mov2#mpkg1#opm2" name="Save User">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#mpkg1#opm2#icu10" gr:x="-50" gr:y="255">
+      <OKLink id="mov2#mpkg1#opm2#icu10#oln19" name="OKFlow19" to="mov2#mpkg1#opm2#opg7#inn4">
+        <LinkParameter id="mov2#mpkg1#opm2#icu10#oln19#par23" name="User Key_Input" source="mov2#mpkg1#opm2#icu10#icp13" target="mov2#mpkg1#opm2#opg7#inn4.isnotnull"/>
+        <LinkParameter id="mov2#mpkg1#opm2#icu10#oln19#par27" name="User Key_PASSING" source="mov2#mpkg1#opm2#icu10#icp13" passing="true"/>
+      </OKLink>
+      <InputCollectorParameter id="mov2#mpkg1#opm2#icu10#icp13" name="User Key"/>
+      <Link id="mov2#mpkg1#opm2#icu10#ln26" name="Add New" to="mov2#mpkg1#opm2#opg7#cru9" type="transport" validate="true">
+        <LinkParameter id="mov2#mpkg1#opm2#icu10#ln26#par25" name="User Object_PASSING" source="mov2#mpkg1#opm2#icu10#icp14" passing="true"/>
+      </Link>
+      <Link id="mov2#mpkg1#opm2#icu10#ln27" name="Flow27" to="mov2#mpkg1#opm2#opg7#mfu4" type="transport" validate="true">
+        <LinkParameter id="mov2#mpkg1#opm2#icu10#ln27#par26" name="User Object_PASSING" source="mov2#mpkg1#opm2#icu10#icp14" passing="true"/>
+        <LinkParameter id="mov2#mpkg1#opm2#icu10#ln27#par33" name="1_Group.oid(defaultGroup)" sourceValue="1" target="mov2#mpkg1#opm2#opg7#mfu4.User2DefaultGroup.groupOID"/>
+        <LinkParameter id="mov2#mpkg1#opm2#icu10#ln27#par34" name="1_Group.oid(groups)" sourceValue="1" target="mov2#mpkg1#opm2#opg7#mfu4.User2Group.groupOID"/>
+        <LinkParameter id="mov2#mpkg1#opm2#icu10#ln27#par35" name="User Object_User Object" source="mov2#mpkg1#opm2#icu10#icp14" target="mov2#mpkg1#opm2#opg7#mfu4.entityBeans"/>
+      </Link>
+      <InputCollectorParameter id="mov2#mpkg1#opm2#icu10#icp14" name="User Object"/>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="655" gr:y="265" id="mov2#mpkg1#opm2#okcu3" name="OK">
+      <OutputCollectorParameter id="mov2#mpkg1#opm2#okcu3#ocp7" name="Message"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit gr:x="655" gr:y="175" id="mov2#mpkg1#opm2#kocu3" name="Falied">
+      <OutputCollectorParameter id="mov2#mpkg1#opm2#kocu3#ocp6" name="Message"/>
+    </KOCollectorUnit>
+  </OperationUnits>
+</OperationModule>

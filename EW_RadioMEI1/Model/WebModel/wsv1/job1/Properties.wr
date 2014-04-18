@@ -1,0 +1,17 @@
+<Job xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="190" gr:y="110" id="wsv1#job1" name="Init DB">
+  <OperationUnits>
+    <InitJobUnit id="wsv1#job1#iju1" name="Init Job" gr:x="0" gr:y="10">
+      <OKLink id="wsv1#job1#iju1#oln5" name="OKFlow5" to="wsv1#job1#seu2" automaticCoupling="true"/>
+    </InitJobUnit>
+    <SelectorUnit gr:x="110" gr:y="0" id="wsv1#job1#seu2" name="Selector2" entity="User">
+      <OKLink id="wsv1#job1#seu2#oln8" name="OKFlow8" to="wsv1#job1#switch1">
+        <LinkParameter id="wsv1#job1#seu2#oln8#par6" name="Data Size_Switch" source="dataSize" target="wsv1#job1#switch1.switch"/>
+      </OKLink>
+    </SelectorUnit>
+    <SwitchUnit gr:x="115" gr:y="115" id="wsv1#job1#switch1" name="Has User?">
+      <Case value="0"/>
+      <OKLink id="wsv1#job1#switch1#oln14" name="OKFlow14" to="wsv1#job1#scu1" automaticCoupling="true" code="0"/>
+    </SwitchUnit>
+    <ScriptUnit gr:x="115" gr:y="220" id="wsv1#job1#scu1" name="Script1" script="WEB-INF/descr/groovy/launchSQL.groovy"/>
+  </OperationUnits>
+</Job>

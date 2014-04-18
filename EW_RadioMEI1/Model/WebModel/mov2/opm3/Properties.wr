@@ -1,0 +1,20 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#opm3" name="Cart" gr:icon="ModulesIcons/Cart.png" gr:x="315" gr:y="115">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#opm3#icu2" gr:x="-125" gr:y="185">
+      <InputCollectorParameter id="mov2#opm3#icu2#icp9" name="musicID"/>
+      <InputCollectorParameter id="mov2#opm3#icu2#icp10" name="Cart Item Object"/>
+      <OKLink id="mov2#opm3#icu2#oln26" name="OKFlow26" to="mov2#opm3#opg11#seu7">
+        <LinkParameter id="mov2#opm3#icu2#oln26#par191" name="cartID_PASSING" source="mov2#opm3#icu2#icp1" passing="true"/>
+      </OKLink>
+      <Link id="mov2#opm3#icu2#ln25" name="Flow25" to="mov2#opm3#opg11#cru10" type="transport" validate="true" gr:bendpoints="295,-76,-250,-86">
+        <LinkParameter id="mov2#opm3#icu2#ln25#par94" name="Cart Item Object_Cart Item Object" source="mov2#opm3#icu2#icp10" target="mov2#opm3#opg11#cru10.entityBeans"/>
+        <LinkParameter id="mov2#opm3#icu2#ln25#par141" name="musicID_Music.oid(CartItemToMusic)" source="mov2#opm3#icu2#icp9" target="mov2#opm3#opg11#cru10.rel2#role4.pkg2#ent11#att28"/>
+      </Link>
+    </InputCollectorUnit>
+    <OKCollectorUnit id="mov2#opm3#okcu2" name="Success" gr:x="725" gr:y="55"/>
+    <KOCollectorUnit gr:x="725" gr:y="180" id="mov2#opm3#kocu1" name="Error"/>
+    <GetUnit id="mov2#opm3#gtu1" name="User ID" gr:x="145" gr:y="55" contextParameters="UserCtxParam" linkOrder="mov2#opm3#gtu1#ln69">
+      <Link id="mov2#opm3#gtu1#ln69" name="Flow69" to="mov2#opm3#opg11#seu7" automaticCoupling="true" type="transport" validate="true"/>
+    </GetUnit>
+  </OperationUnits>
+</OperationModule>

@@ -1,0 +1,36 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1#area2#opg2" name="Music Operation" transaction="true" gr:x="0" gr:y="0">
+  <OperationUnits>
+    <CreateUnit id="sv1#area2#opg2#cru2" gr:x="140" gr:y="430" entity="pkg2#ent11" name="Add">
+      <OKLink id="sv1#area2#opg2#cru2#oln9" name="OKFlow28" to="sv1#area2#opg2#cnu3" automaticCoupling="true"/>
+    </CreateUnit>
+    <ConnectUnit id="sv1#area2#opg2#cnu3" name="Connector" gr:x="0" gr:y="280" relationship="rel19#role37">
+      <SourceSelector id="sv1#area2#opg2#cnu3#su10" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area2#opg2#cnu3#su10#kcond10" name="KeyCondition16" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv1#area2#opg2#cnu3#su11" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area2#opg2#cnu3#su11#kcond11" name="KeyCondition17" predicate="in" implied="false"/>
+      </TargetSelector>
+      <OKLink id="sv1#area2#opg2#cnu3#oln21" name="OKFlow21" to="sv1#area2#opg2#cnu4" automaticCoupling="true"/>
+    </ConnectUnit>
+    <DeleteUnit id="sv1#area2#opg2#dlu6" name="Delete2" gr:x="15" gr:y="0" entity="pkg2#ent11">
+      <Selector id="sv1#area2#opg2#dlu6#su23" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area2#opg2#dlu6#su23#kcond23" name="KeyCondition12" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv1#area2#opg2#dlu6#oln18" name="OKFlow11" to="sv1#area2#page6#mssu1">
+        <LinkParameter id="sv1#area2#opg2#dlu6#oln18#par101" name="Music Removed with Success_Shown Messages" target="sv1#area2#page6#mssu1.shownMessages" sourceValue="Music removed with success."/>
+      </OKLink>
+      <KOLink id="sv1#area2#opg2#dlu6#kln15" name="KOFlow10" to="sv1#area2#page6#mssu1" gr:bendpoints="-48,59,62,-31">
+        <LinkParameter id="sv1#area2#opg2#dlu6#kln15#par102" name="Error removing music. Contact administrator._Shown Messages" target="sv1#area2#page6#mssu1.shownMessages" sourceValue="Error removing music. Contact administrator."/>
+      </KOLink>
+    </DeleteUnit>
+    <ConnectUnit gr:x="0" gr:y="130" id="sv1#area2#opg2#cnu4" name="Connect4" relationship="rel14#role28">
+      <SourceSelector id="sv1#area2#opg2#cnu4#su12" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area2#opg2#cnu4#su12#kcond12" name="KeyCondition12" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv1#area2#opg2#cnu4#su14" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area2#opg2#cnu4#su14#kcond14" name="KeyCondition14" predicate="in" implied="false"/>
+      </TargetSelector>
+      <OKLink id="sv1#area2#opg2#cnu4#oln20" name="OKFlow20" to="sv1#area2#page6#mssu1" automaticCoupling="true"/>
+    </ConnectUnit>
+  </OperationUnits>
+</OperationGroup>
