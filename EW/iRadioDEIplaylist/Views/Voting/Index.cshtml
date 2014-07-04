@@ -1,0 +1,78 @@
+﻿@model IEnumerable<iRadioDEIplaylist.Models.Playlist>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @ViewBag.Message
+</p>
+
+<table>
+    <tr>
+        <th>
+            MusicName
+        </th>
+        <th>
+            MusicDuration (seconds)
+        </th>
+        <th>
+            GenreName
+        </th>
+        <th>
+            AlbumName
+        </th>
+        <th>
+            ArtistName
+        </th>
+        <th>
+            Vote!
+        </th>
+    </tr>
+@foreach (var play in Model) { 
+    
+    foreach (var music in play.Musics) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => music.MusicName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => music.MusicDuration)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => music.Genre.GenreName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => music.Album.AlbumName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => music.Album.Artist.ArtistName)
+            </td>
+            <td></td>
+        </tr>
+    }
+    <tr>
+        <td>
+            Author:
+        </td>
+        <td>
+            @play.UserProfile.UserName
+        </td>
+        <td>
+            Votes:
+        </td>
+        <td>
+            @play.PlaylistVotes
+        </td>
+        <td></td>
+        <td>
+            @Html.ActionLink("Vote", "Vote", new { id=play.PlaylistId })
+        </td>
+    </tr>
+    <tr >
+        <td colspan="6">&nbsp</td>
+    </tr>
+}
+</table>

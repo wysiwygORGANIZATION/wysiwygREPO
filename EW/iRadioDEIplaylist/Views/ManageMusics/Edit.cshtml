@@ -1,0 +1,61 @@
+﻿@model iRadioDEIplaylist.Models.Music
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Music</legend>
+
+        @Html.HiddenFor(model => model.MusicId)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MusicName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MusicName)
+            @Html.ValidationMessageFor(model => model.MusicName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MusicDuration)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MusicDuration)
+            @Html.ValidationMessageFor(model => model.MusicDuration)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.GenreId, "Genre")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("GenreId", String.Empty)
+            @Html.ValidationMessageFor(model => model.GenreId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AlbumId, "Album")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("AlbumId", String.Empty)
+            @Html.ValidationMessageFor(model => model.AlbumId)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

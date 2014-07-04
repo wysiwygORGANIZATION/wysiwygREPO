@@ -1,0 +1,52 @@
+﻿@model IEnumerable<iRadioDEIplaylist.Models.Music>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<p>@ViewBag.Message</p>
+
+<table>
+    <tr>
+        <th>
+            MusicName
+        </th>
+        <th>
+            MusicDuration (seconds)
+        </th>
+        <th>
+            GenreName
+        </th>
+        <th>
+            AlbumName
+        </th>
+        <th>
+            ArtistName
+        </th>
+        <th>
+            AddToCart
+        </th>
+    </tr>
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MusicName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MusicDuration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Genre.GenreName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Album.AlbumName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Album.Artist.ArtistName)
+        </td>
+        <td>
+            @Html.ActionLink("Select", "Add", new { id=item.MusicId })
+        </td>
+    </tr>
+}
+</table>

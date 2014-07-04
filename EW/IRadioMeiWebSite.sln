@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iRadioMEI", "iRadioDEIplaylist\iRadioMEI.csproj", "{13057CF9-1A8B-4ED3-AF8F-348F190880BC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B83CA898-6F74-4033-8F59-6E1A90442025} = {B83CA898-6F74-4033-8F59-6E1A90442025}
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "MusicPreferences", "http://localhost:1945", "{B83CA898-6F74-4033-8F59-6E1A90442025}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_1945"
+		Debug.AspNetCompiler.PhysicalPath = "MusicPreferences\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1945\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_1945"
+		Release.AspNetCompiler.PhysicalPath = "MusicPreferences\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1945\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "MusicPreferences\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helpdesk", "Helpdesk\Helpdesk\Helpdesk.csproj", "{4FD2B2FE-58D5-4FA4-941A-E7FA0EDE19C1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{13057CF9-1A8B-4ED3-AF8F-348F190880BC} = {13057CF9-1A8B-4ED3-AF8F-348F190880BC}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{13057CF9-1A8B-4ED3-AF8F-348F190880BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13057CF9-1A8B-4ED3-AF8F-348F190880BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13057CF9-1A8B-4ED3-AF8F-348F190880BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13057CF9-1A8B-4ED3-AF8F-348F190880BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B83CA898-6F74-4033-8F59-6E1A90442025}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B83CA898-6F74-4033-8F59-6E1A90442025}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B83CA898-6F74-4033-8F59-6E1A90442025}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{B83CA898-6F74-4033-8F59-6E1A90442025}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{4FD2B2FE-58D5-4FA4-941A-E7FA0EDE19C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FD2B2FE-58D5-4FA4-941A-E7FA0EDE19C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FD2B2FE-58D5-4FA4-941A-E7FA0EDE19C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FD2B2FE-58D5-4FA4-941A-E7FA0EDE19C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

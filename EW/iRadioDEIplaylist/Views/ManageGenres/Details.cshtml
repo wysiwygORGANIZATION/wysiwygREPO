@@ -1,0 +1,22 @@
+﻿@model iRadioDEIplaylist.Models.Genre
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Genre</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GenreName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GenreName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.GenreId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,29 @@
+﻿@model iRadioDEIplaylist.Models.NewSound
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>NewSound</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NewSoundDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NewSoundDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Playlist.PlaylistId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Playlist.PlaylistId)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.NewSoundId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

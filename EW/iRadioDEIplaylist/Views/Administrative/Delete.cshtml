@@ -1,0 +1,46 @@
+﻿@model iRadioDEIplaylist.Models.UserProfile
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>UserProfile</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UserName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UserEmail)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserEmail)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UserBirthDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserBirthDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UserAddress)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserAddress)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+            <p>
+                iRadioMei lets you search for the latest music, vote in playlists and even lets you make your own playlist!
+            </p>
+        </div>
+    </section>
+}
+<h3>We suggest the following:</h3>
+<ol class="round">
+    <li class="one">
+        <h5>Getting Started</h5>
+        Use our widget to search for the latest musics in lastfm.com. @Html.ActionLink("Widget", "Widget", "Home")
+    </li>
+
+    <li class="two">
+        <h5>Playlist voting</h5>
+        As an anonymous user you can vote in existing playlist made by other users. @Html.ActionLink("Vote!", "Index", "Voting")
+    </li>
+
+    <li class="three">
+        <h5>Make your own playlist</h5>
+        Register now (for free) and start building you own playlists and see if yours is the one that goes to New Sounds! @Html.ActionLink("Register now!", "Register", "Account") or @Html.ActionLink("Login", "Login", "Account")
+    </li>
+</ol>

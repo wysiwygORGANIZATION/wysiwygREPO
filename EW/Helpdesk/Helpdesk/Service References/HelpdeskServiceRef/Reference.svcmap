@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2ee36e2a-aad5-49a8-890a-cc34b7182933" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:2545/HelpdeskWS.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="HelpdeskWS.xsd" MetadataType="Schema" ID="38ccc0fc-4181-4161-b372-3c5b8f38cc1d" SourceId="1" SourceUrl="http://localhost:2545/HelpdeskWS.svc?xsd=xsd1" />
+    <MetadataFile FileName="HelpdeskWS1.xsd" MetadataType="Schema" ID="31e067bb-c0ce-4e84-8f8f-d7931a378d98" SourceId="1" SourceUrl="http://localhost:2545/HelpdeskWS.svc?xsd=xsd0" />
+    <MetadataFile FileName="HelpdeskWS.disco" MetadataType="Disco" ID="b4e511e0-8f8d-4701-8c3a-279062bb4789" SourceId="1" SourceUrl="http://localhost:2545/HelpdeskWS.svc?disco" />
+    <MetadataFile FileName="HelpdeskWS.wsdl" MetadataType="Wsdl" ID="66ea966e-86f8-4722-af9a-a4026a5c1cd9" SourceId="1" SourceUrl="http://localhost:2545/HelpdeskWS.svc?wsdl" />
+    <MetadataFile FileName="HelpdeskWS2.xsd" MetadataType="Schema" ID="2a1e4b98-fa9b-430b-af96-b6b235423574" SourceId="1" SourceUrl="http://localhost:2545/HelpdeskWS.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

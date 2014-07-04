@@ -1,0 +1,43 @@
+﻿@model iRadioDEIplaylist.Models.Music
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Music</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MusicName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MusicName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MusicDuration)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MusicDuration)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Genre.GenreName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Genre.GenreName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Album.AlbumName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Album.AlbumName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.MusicId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

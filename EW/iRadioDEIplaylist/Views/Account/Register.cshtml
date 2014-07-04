@@ -1,0 +1,51 @@
+﻿@model iRadioDEIplaylist.Models.RegisterModel
+@{
+    ViewBag.Title = "Register";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>Create a new account.</h2>
+</hgroup>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+
+    <fieldset>
+        <legend>Registration Form</legend>
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.UserName)
+                @Html.TextBoxFor(m => m.UserName)
+            </li>
+            <!-- fields added [begin] -->
+            <li>
+                @Html.LabelFor(m => m.UserEmail)
+                @Html.TextBoxFor(m => m.UserEmail)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.UserBirthDate)
+                @Html.EditorFor(m => m.UserBirthDate)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.UserAddress)
+                @Html.TextBoxFor(m => m.UserAddress)
+            </li>
+            <!-- fields added [end] -->
+            <li>
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.ConfirmPassword)
+                @Html.PasswordFor(m => m.ConfirmPassword)
+            </li>
+        </ol>
+        <input type="submit" value="Register" />
+    </fieldset>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

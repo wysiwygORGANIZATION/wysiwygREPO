@@ -1,0 +1,36 @@
+﻿@model iRadioDEIplaylist.ViewModels.UserRole
+
+@{
+    ViewBag.Title = "Role";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>UserProfile</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.User.UserName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.User.UserName)
+        </div>
+
+        <div class="editor-label">
+            <b>Role</b>
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(x => x.Role, new SelectList(ViewBag.roles))
+        </div>
+        <p>
+            <input type="submit" value="Apply" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
